@@ -5,7 +5,12 @@ class Task:
 
 
 def add_task(tasks):
-    title = input("Enter task: ")
+    title = input("Enter task: ").strip()
+
+    if not title:
+        print("Task cannot be empty.")
+        return
+
     task = Task(title)
     tasks.append(task)
     print("Task added successfully.")
