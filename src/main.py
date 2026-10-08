@@ -38,7 +38,7 @@ def complete_task(tasks):
 
         if 1 <= number <= len(tasks):
             tasks[number - 1].completed = True
-            print("Task marked as completed.")
+            print(f"Task '{tasks[number - 1].title}' marked as completed.")
         else:
             print("Invalid task number.")
 
